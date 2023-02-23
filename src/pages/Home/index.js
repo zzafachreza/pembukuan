@@ -148,9 +148,95 @@ export default function Home({ navigation }) {
           padding: 10,
           justifyContent: 'space-around'
         }}>
-          <MyMenu onPress={() => navigation.navigate('Beli')} img={require('../../assets/A4.png')} judul="Pembelian" />
-          <MyMenu onPress={() => navigation.navigate('Jual')} img={require('../../assets/A2.png')} judul="Penjualan" />
-          <MyMenu onPress={() => navigation.navigate('Riwayat')} img={require('../../assets/A3.png')} judul="Laporan Pembukuan" />
+
+          <TouchableOpacity onPress={() => navigation.navigate('Beli')} style={{
+            width: windowWidth / 3.5,
+          }} >
+            <View style={{
+              width: windowWidth / 3.5,
+              borderWidth: 0,
+              borderColor: colors.primary,
+              backgroundColor: colors.primary,
+              height: windowHeight / 7,
+              borderRadius: 10,
+              justifyContent: 'center',
+              alignItems: 'center'
+            }}>
+              <Image source={require('../../assets/A4.png')} style={{
+                width: windowHeight / 6,
+                height: windowHeight / 12,
+                resizeMode: 'contain'
+              }} />
+            </View>
+            <Text style={{
+              marginTop: 5,
+              fontFamily: fonts.secondary[600],
+              color: colors.black,
+              textAlign: 'center'
+
+            }}>Pembelian</Text>
+          </TouchableOpacity>
+
+
+          <TouchableOpacity onPress={() => navigation.navigate('Jual')} style={{
+            width: windowWidth / 3.5,
+          }} >
+            <View style={{
+              width: windowWidth / 3.5,
+              borderWidth: 0,
+              borderColor: colors.primary,
+              backgroundColor: colors.primary,
+              height: windowHeight / 7,
+              borderRadius: 10,
+              justifyContent: 'center',
+              alignItems: 'center'
+            }}>
+              <Image source={require('../../assets/A2.png')} style={{
+                width: windowHeight / 6,
+                height: windowHeight / 12,
+                resizeMode: 'contain'
+              }} />
+            </View>
+            <Text style={{
+              marginTop: 5,
+              fontFamily: fonts.secondary[600],
+              color: colors.black,
+              textAlign: 'center'
+
+            }}>Penjualan</Text>
+          </TouchableOpacity>
+
+          <TouchableOpacity onPress={() => navigation.navigate('Riwayat')} style={{
+            width: windowWidth / 3.5,
+          }} >
+            <View style={{
+              width: windowWidth / 3.5,
+              borderWidth: 0,
+              borderColor: colors.primary,
+              backgroundColor: colors.primary,
+              height: windowHeight / 7,
+              borderRadius: 10,
+              justifyContent: 'center',
+              alignItems: 'center'
+            }}>
+              <Image source={require('../../assets/A3.png')} style={{
+                width: windowHeight / 6,
+                height: windowHeight / 12,
+                resizeMode: 'contain'
+              }} />
+            </View>
+            <Text style={{
+              marginTop: 5,
+              fontFamily: fonts.secondary[600],
+              color: colors.black,
+              textAlign: 'center'
+
+            }}>Laporan Pembukuan</Text>
+          </TouchableOpacity>
+
+
+
+
         </View>
 
         <View style={{
@@ -159,9 +245,94 @@ export default function Home({ navigation }) {
           padding: 10,
           justifyContent: 'space-around'
         }}>
-          <MyMenu onPress={() => navigation.navigate('Barang')} img={require('../../assets/A6.png')} judul="Data Barang" />
-          <MyMenu onPress={() => navigation.navigate('Slider')} img={require('../../assets/A1.png')} judul="Data Slider" />
-          <MyMenu onPress={() => navigation.navigate('Pengguna')} img={require('../../assets/A5.png')} judul="Data Pengguna" />
+
+          <TouchableOpacity onPress={() => navigation.navigate('Barang')} style={{
+            width: windowWidth / 3.5,
+          }} >
+            <View style={{
+              width: windowWidth / 3.5,
+              borderWidth: 0,
+              borderColor: colors.primary,
+              backgroundColor: colors.primary,
+              height: windowHeight / 7,
+              borderRadius: 10,
+              justifyContent: 'center',
+              alignItems: 'center'
+            }}>
+              <Image source={require('../../assets/A6.png')} style={{
+                width: windowHeight / 6,
+                height: windowHeight / 12,
+                resizeMode: 'contain'
+              }} />
+            </View>
+            <Text style={{
+              marginTop: 5,
+              fontFamily: fonts.secondary[600],
+              color: colors.black,
+              textAlign: 'center'
+
+            }}>Data Barang</Text>
+          </TouchableOpacity>
+
+          <TouchableOpacity onPress={() => navigation.navigate('Slider')} style={{
+            width: windowWidth / 3.5,
+          }} >
+            <View style={{
+              width: windowWidth / 3.5,
+              borderWidth: 0,
+              borderColor: colors.primary,
+              backgroundColor: colors.primary,
+              height: windowHeight / 7,
+              borderRadius: 10,
+              justifyContent: 'center',
+              alignItems: 'center'
+            }}>
+              <Image source={require('../../assets/A1.png')} style={{
+                width: windowHeight / 6,
+                height: windowHeight / 12,
+                resizeMode: 'contain'
+              }} />
+            </View>
+            <Text style={{
+              marginTop: 5,
+              fontFamily: fonts.secondary[600],
+              color: colors.black,
+              textAlign: 'center'
+
+            }}>Data Slider</Text>
+          </TouchableOpacity>
+
+          <TouchableOpacity onPress={() => navigation.navigate('Pengguna')} style={{
+            width: windowWidth / 3.5,
+          }} >
+            <View style={{
+              width: windowWidth / 3.5,
+              borderWidth: 0,
+              borderColor: colors.primary,
+              backgroundColor: colors.primary,
+              height: windowHeight / 7,
+              borderRadius: 10,
+              justifyContent: 'center',
+              alignItems: 'center'
+            }}>
+              <Image source={require('../../assets/A5.png')} style={{
+                width: windowHeight / 6,
+                height: windowHeight / 12,
+                resizeMode: 'contain'
+              }} />
+            </View>
+            <Text style={{
+              marginTop: 5,
+              fontFamily: fonts.secondary[600],
+              color: colors.black,
+              textAlign: 'center'
+
+            }}>Data Pengguna</Text>
+          </TouchableOpacity>
+
+
+
+
 
         </View>
       </View>
