@@ -143,7 +143,7 @@ export default function Jual({ navigation }) {
                             onPress: () => {
 
                                 console.log(item.id);
-                                axios.post(apiURL + 'beli_delete', {
+                                axios.post(apiURL + 'jual_delete', {
                                     id: item.id
                                 }).then(res => {
                                     console.log(res.data);
