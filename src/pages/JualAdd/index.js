@@ -30,18 +30,22 @@ export default function JualAdd({ navigation, route }) {
         fid_barang: '',
         harga: 0,
         jumlah: 0,
-        total: 0
+        total: 0,
+        fid_user: 0,
     });
 
 
 
     useEffect(() => {
-        axios.post(apiURL + 'barang_get').then(rs => {
-            console.log(rs.data);
-            setBarang(rs.data);
-            setKirim({
-                ...kirim,
-                fid_barang: rs.data[0].value
+        getData('user').then(u => {
+            axios.post(apiURL + 'barang_get').then(rs => {
+                console.log(rs.data);
+                setBarang(rs.data);
+                setKirim({
+                    ...kirim,
+                    fid_user: u.id,
+                    fid_barang: rs.data[0].value
+                })
             })
         })
     }, [])

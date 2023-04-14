@@ -28,7 +28,7 @@ export default function Home({ navigation }) {
     __getTransaction();
     if (isFocused) {
       axios.post(apiURL + 'slider').then(res => {
-        console.log(res.data)
+        console.log('slider', res.data)
         SETENTITIES(res.data);
       })
     }
@@ -274,61 +274,66 @@ export default function Home({ navigation }) {
             }}>Data Barang</Text>
           </TouchableOpacity>
 
-          <TouchableOpacity onPress={() => navigation.navigate('Slider')} style={{
-            width: windowWidth / 3.5,
-          }} >
-            <View style={{
-              width: windowWidth / 3.5,
-              borderWidth: 0,
-              borderColor: colors.primary,
-              backgroundColor: colors.primary,
-              height: windowHeight / 7,
-              borderRadius: 10,
-              justifyContent: 'center',
-              alignItems: 'center'
-            }}>
-              <Image source={require('../../assets/A1.png')} style={{
-                width: windowHeight / 6,
-                height: windowHeight / 12,
-                resizeMode: 'contain'
-              }} />
-            </View>
-            <Text style={{
-              marginTop: 5,
-              fontFamily: fonts.secondary[600],
-              color: colors.black,
-              textAlign: 'center'
+          {user.level == 'Admin' &&
+            <>
+              <TouchableOpacity onPress={() => navigation.navigate('Slider')} style={{
+                width: windowWidth / 3.5,
+              }} >
+                <View style={{
+                  width: windowWidth / 3.5,
+                  borderWidth: 0,
+                  borderColor: colors.primary,
+                  backgroundColor: colors.primary,
+                  height: windowHeight / 7,
+                  borderRadius: 10,
+                  justifyContent: 'center',
+                  alignItems: 'center'
+                }}>
+                  <Image source={require('../../assets/A1.png')} style={{
+                    width: windowHeight / 6,
+                    height: windowHeight / 12,
+                    resizeMode: 'contain'
+                  }} />
+                </View>
+                <Text style={{
+                  marginTop: 5,
+                  fontFamily: fonts.secondary[600],
+                  color: colors.black,
+                  textAlign: 'center'
 
-            }}>Data Slider</Text>
-          </TouchableOpacity>
+                }}>Data Slider</Text>
+              </TouchableOpacity>
 
-          <TouchableOpacity onPress={() => navigation.navigate('Pengguna')} style={{
-            width: windowWidth / 3.5,
-          }} >
-            <View style={{
-              width: windowWidth / 3.5,
-              borderWidth: 0,
-              borderColor: colors.primary,
-              backgroundColor: colors.primary,
-              height: windowHeight / 7,
-              borderRadius: 10,
-              justifyContent: 'center',
-              alignItems: 'center'
-            }}>
-              <Image source={require('../../assets/A5.png')} style={{
-                width: windowHeight / 6,
-                height: windowHeight / 12,
-                resizeMode: 'contain'
-              }} />
-            </View>
-            <Text style={{
-              marginTop: 5,
-              fontFamily: fonts.secondary[600],
-              color: colors.black,
-              textAlign: 'center'
+              <TouchableOpacity onPress={() => navigation.navigate('Pengguna')} style={{
+                width: windowWidth / 3.5,
+              }} >
+                <View style={{
+                  width: windowWidth / 3.5,
+                  borderWidth: 0,
+                  borderColor: colors.primary,
+                  backgroundColor: colors.primary,
+                  height: windowHeight / 7,
+                  borderRadius: 10,
+                  justifyContent: 'center',
+                  alignItems: 'center'
+                }}>
+                  <Image source={require('../../assets/A5.png')} style={{
+                    width: windowHeight / 6,
+                    height: windowHeight / 12,
+                    resizeMode: 'contain'
+                  }} />
+                </View>
+                <Text style={{
+                  marginTop: 5,
+                  fontFamily: fonts.secondary[600],
+                  color: colors.black,
+                  textAlign: 'center'
 
-            }}>Data Pengguna</Text>
-          </TouchableOpacity>
+                }}>Data Pengguna</Text>
+              </TouchableOpacity>
+            </>
+
+          }
 
 
 

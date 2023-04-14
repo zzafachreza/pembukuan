@@ -25,16 +25,23 @@ export default function Riwayat({ navigation }) {
     useEffect(() => {
 
         if (isFocused) {
-            axios.post(apiURL + 'beli').then(res => {
-                console.log(res.data);
-                setData(res.data);
 
-            })
+            getData('user').then(u => {
+                axios.post(apiURL + 'beli', {
+                    fid_user: u.id
+                }).then(res => {
+                    console.log(res.data);
+                    setData(res.data);
 
-            axios.post(apiURL + 'jual').then(res => {
-                console.log(res.data);
-                setData2(res.data);
+                })
 
+                axios.post(apiURL + 'jual', {
+                    fid_user: u.id
+                }).then(res => {
+                    console.log(res.data);
+                    setData2(res.data);
+
+                })
             })
         }
 
